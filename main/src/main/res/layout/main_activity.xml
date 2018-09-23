@@ -12,29 +12,29 @@
 
     <Button
         android:id="@+id/BudgetButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_width="380dp"
+        android:layout_height="146dp"
+        android:layout_above="@+id/CategoryButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="164dp"
         android:background="?attr/colorPrimary"
         android:text="@string/BUDGET" />
 
     <Button
         android:id="@+id/CategoryButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_width="380dp"
+        android:layout_height="140dp"
+        android:layout_above="@+id/GraphButton"
+        android:layout_centerHorizontal="true"
         android:background="#b5433f"
         android:text="@string/CATEGORIES" />
 
     <Button
         android:id="@+id/GraphButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="381dp"
+        android:layout_height="144dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="165dp"
+        android:layout_marginBottom="0dp"
         android:background="#70b53f"
         android:text="@string/SPENDING_GRAPH" />
 
