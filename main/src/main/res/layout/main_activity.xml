@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,7 +8,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Activity 1!" />
+        android:text="@string/Activity_1" />
 
     <Button
         android:id="@+id/BudgetButton"
@@ -19,7 +18,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="164dp"
         android:background="?attr/colorPrimary"
-        android:text="BUDGET" />
+        android:text="@string/BUDGET" />
 
     <Button
         android:id="@+id/CategoryButton"
@@ -27,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:background="#b5433f"
-        android:text="CATEGORIES" />
+        android:text="@string/CATEGORIES" />
 
     <Button
         android:id="@+id/GraphButton"
@@ -37,6 +36,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="165dp"
         android:background="#70b53f"
-        android:text="SPENDING GRAPH" />
+        android:text="@string/SPENDING_GRAPH" />
 
 </RelativeLayout>
