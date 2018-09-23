@@ -7,17 +7,36 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    private Button gotopage2;
+    private Button budgetpage;
+    private Button categorypage;
+    private Button graphpage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        gotopage2 = (Button)findViewById(R.id.BudgetButton);
-        gotopage2.setOnClickListener(new View.OnClickListener() {
+        budgetpage = findViewById(R.id.BudgetButton);
+        budgetpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this,Main2Activity.class);
+                Intent i = new Intent(MainActivity.this,BudgetActivity.class);
                 startActivity(i);
+            }
+        });
+        categorypage = findViewById(R.id.CategoryButton);
+        categorypage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent j = new Intent(MainActivity.this,CategoryActivity.class);
+                startActivity(j);
+            }
+        });
+
+        graphpage = findViewById(R.id.GraphButton);
+        graphpage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent k = new Intent(MainActivity.this,GraphActivity.class);
+                startActivity(k);
             }
         });
     }
