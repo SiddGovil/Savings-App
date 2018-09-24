@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class BudgetActivity extends AppCompatActivity {
-    int inputbugdet;
+    float inputbugdet;
     Button submitButton;
     EditText budgetinput;
     @Override
@@ -20,7 +20,13 @@ public class BudgetActivity extends AppCompatActivity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                inputbugdet = Integer.valueOf(budgetinput.getText().toString());
+                try {
+                    inputbugdet = Float.valueOf(budgetinput.getText().toString());
+                }
+                catch(NumberFormatException error){
+                    inputbugdet = 0;
+                    showToast("Error");
+                }
                 showToast(String.valueOf(inputbugdet));
             }
     });

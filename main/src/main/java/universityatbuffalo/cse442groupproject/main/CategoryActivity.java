@@ -9,15 +9,15 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class CategoryActivity extends AppCompatActivity {
-    int inputfood;
+    float inputfood;
     Button buttonforfood;
     EditText foodinput;
 
-    int inputcloth;
+    float inputcloth;
     Button buttonforcloth;
     EditText clothinput;
 
-    int inputother;
+    float inputother;
     Button buttonforother;
     EditText otherinput;
 
@@ -33,7 +33,14 @@ public class CategoryActivity extends AppCompatActivity {
         buttonforcloth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                inputcloth = Integer.valueOf(clothinput.getText().toString());
+                try {
+                    inputcloth = Float.valueOf(clothinput.getText().toString());
+
+                }
+                catch(NumberFormatException error){
+                    inputcloth = 0;
+                    showToast("Error");
+                }
                 showToast(String.valueOf(inputcloth));
             }
         });
@@ -42,7 +49,13 @@ public class CategoryActivity extends AppCompatActivity {
         buttonforother.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                inputother = Integer.valueOf(otherinput.getText().toString());
+                try {
+                    inputother = Float.valueOf(otherinput.getText().toString());
+                }
+                catch(NumberFormatException error){
+                    inputother = 0;
+                    showToast("Error");
+                }
                 showToast(String.valueOf(inputother));
             }
         });
@@ -50,7 +63,13 @@ public class CategoryActivity extends AppCompatActivity {
         buttonforfood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                inputfood = Integer.valueOf(foodinput.getText().toString());
+                try{
+                    inputfood = Float.valueOf(foodinput.getText().toString());
+                }
+               catch(NumberFormatException error){
+                    inputfood = 0;
+                    showToast("Error");
+               }
                 showToast(String.valueOf(inputfood));
             }
         });
