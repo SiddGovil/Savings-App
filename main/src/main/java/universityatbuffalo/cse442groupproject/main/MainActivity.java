@@ -5,11 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private Button budgetpage;
     private Button categorypage;
     private Button graphpage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,5 +42,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(k);
             }
         });
-    }
+
+        }
+
+
+
+
 }
