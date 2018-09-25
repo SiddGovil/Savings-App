@@ -35,6 +35,6 @@ public class BudgetActivity extends AppCompatActivity {
 
         private void showToast(String text){
             Toast.makeText(BudgetActivity.this, text, Toast.LENGTH_SHORT).show();
-
+            //return text;
         }
 }
