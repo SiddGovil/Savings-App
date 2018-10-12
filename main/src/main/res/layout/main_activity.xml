@@ -5,6 +5,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/GraphButton"
+        android:layout_width="299dp"
+        android:layout_height="64dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/BudgetButton"
+        android:layout_marginTop="232dp"
+        android:background="#70b53f"
+        android:text="@string/SPENDING_GRAPH" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -12,30 +22,39 @@
 
     <Button
         android:id="@+id/BudgetButton"
-        android:layout_width="380dp"
-        android:layout_height="146dp"
-        android:layout_above="@+id/CategoryButton"
-        android:layout_centerHorizontal="true"
+        android:layout_width="301dp"
+        android:layout_height="74dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="35dp"
         android:background="?attr/colorPrimary"
         android:text="@string/BUDGET" />
 
     <Button
         android:id="@+id/CategoryButton"
-        android:layout_width="380dp"
-        android:layout_height="140dp"
-        android:layout_above="@+id/GraphButton"
-        android:layout_centerHorizontal="true"
+        android:layout_width="298dp"
+        android:layout_height="72dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="129dp"
         android:background="#b5433f"
         android:text="@string/CATEGORIES" />
 
     <Button
-        android:id="@+id/GraphButton"
-        android:layout_width="381dp"
-        android:layout_height="144dp"
+        android:id="@+id/CouponButton"
+        android:layout_width="298dp"
+        android:layout_height="63dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="0dp"
-        android:background="#70b53f"
-        android:text="@string/SPENDING_GRAPH" />
+        android:layout_alignStart="@+id/BudgetButton"
+        android:layout_marginBottom="185dp"
+        android:background="#ee8200"
+        android:text="Coupon" />
+
+
+
+
+
 
 </RelativeLayout>

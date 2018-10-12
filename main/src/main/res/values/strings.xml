@@ -1,6 +1,8 @@
 <resources>
 <string name="BUDGET">BUDGET</string>
 <string name="CATEGORIES">CATEGORIES</string>
+    <string name="COUPON">COUPON</string>
 <string name="SPENDING_GRAPH">SPENDING GRAPH</string>
     <string name="Activity_1">Activity 1</string>
+
 </resources>

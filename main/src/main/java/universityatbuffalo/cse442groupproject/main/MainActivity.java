@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     private Button budgetpage;
     private Button categorypage;
     private Button graphpage;
+    private Button couponpage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent k = new Intent(MainActivity.this,GraphActivity.class);
                 startActivity(k);
+            }
+        });
+
+        couponpage = findViewById(R.id.CouponButton);
+        couponpage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent l = new Intent(MainActivity.this,CouponActivity.class);
+                startActivity(l);
             }
         });
 
