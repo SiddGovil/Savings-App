@@ -4,5 +4,6 @@
     <string name="COUPON">COUPON</string>
 <string name="SPENDING_GRAPH">SPENDING GRAPH</string>
     <string name="Activity_1">Activity 1</string>
-
+    <string name="SETTINGS">SETTINGS</string>
+    <string name="COUPONS">COUPONS</string>
 </resources>
