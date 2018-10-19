@@ -29,7 +29,7 @@ public class BudgetActivity extends AppCompatActivity {
                 }
                 showToast(String.valueOf(inputbugdet));
             }
-    });
+        });
 
     }
 
