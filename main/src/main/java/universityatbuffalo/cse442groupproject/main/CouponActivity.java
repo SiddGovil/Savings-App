@@ -24,6 +24,7 @@ public class CouponActivity extends AppCompatActivity {
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 try {
                     Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
                     String searchinput = couponinput.getText().toString();
