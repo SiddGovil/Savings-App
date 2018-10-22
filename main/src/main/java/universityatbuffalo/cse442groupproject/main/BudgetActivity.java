@@ -1,5 +1,6 @@
 package universityatbuffalo.cse442groupproject.main;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,10 +8,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Vector;
+
 public class BudgetActivity extends AppCompatActivity {
     float inputbugdet;
+    float amountspent;
+    int rating;
+    String inputlocation;
     Button submitButton;
+    Button spendingHistory;
+    Button saveButton;
     EditText budgetinput;
+    EditText locationinput;
+    EditText amountinput;
+    EditText ratinginput;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +41,34 @@ public class BudgetActivity extends AppCompatActivity {
                 showToast(String.valueOf(inputbugdet));
             }
     });
+//        locationinput = findViewById(R.id.locationtext);
+//        amountinput = findViewById(R.id.amounttext);
+//        ratinginput = findViewById(R.id.ratingtext);
+//        saveButton = findViewById(R.id.savebutton);
+//        saveButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                try{
+//                    amountspent = Float.valueOf(amountinput.getText().toString());
+//                    rating = Integer.valueOf(ratinginput.getText().toString());
+//                    if(rating > 5 || rating < 1){
+//                        rating =0;
+//                        showToast("Error Rating must be between 1 and 5");}
+//                }catch(NumberFormatException t){
+//                    amountspent = 0;
+//
+//                    showToast("Error");
+//                }
+//            }
+//        });
+        spendingHistory = findViewById(R.id.spendinghistory);
+        spendingHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent k = new Intent(BudgetActivity.this,HistoryActivity.class);
+                startActivity(k);
+            }
+        });
 
     }
 
