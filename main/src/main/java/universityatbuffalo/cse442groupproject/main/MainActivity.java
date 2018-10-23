@@ -5,9 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
-
+import android.net.Uri;
 public class MainActivity extends AppCompatActivity {
     private Button budgetpage;
     private Button categorypage;
@@ -48,8 +46,15 @@ public class MainActivity extends AppCompatActivity {
         couponpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent l = new Intent(MainActivity.this,CouponActivity.class);
-                startActivity(l);
+                Uri webpage = Uri.parse("https://www.groupon.com");
+                Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+                if (intent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(intent);
+                }
+
+
+               // Intent l = new Intent(MainActivity.this,CouponActivity.class);
+                //startActivity(l);
             }
         });
 
