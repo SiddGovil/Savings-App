@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
     private Button categorypage;
     private Button graphpage;
     private Button couponpage;
+    private Button settingspage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +53,14 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
 
+                settingspage = findViewById(R.id.settings);
+                settingspage.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent l = new Intent(MainActivity.this,SettingsActivity.class);
+                        startActivity(l);
+                    }
+                });
 
                // Intent l = new Intent(MainActivity.this,CouponActivity.class);
                 //startActivity(l);
