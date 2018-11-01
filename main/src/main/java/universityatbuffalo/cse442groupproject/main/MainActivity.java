@@ -43,6 +43,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        settingspage = findViewById(R.id.settingsbt);
+        settingspage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent m = new Intent(MainActivity.this,SettingsActivity.class);
+                startActivity(m);
+            }
+        });
+
         couponpage = findViewById(R.id.CouponButton);
         couponpage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,19 +62,10 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
 
-                settingspage = findViewById(R.id.settings);
-                settingspage.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent l = new Intent(MainActivity.this,SettingsActivity.class);
-                        startActivity(l);
-                    }
-                });
-
-               // Intent l = new Intent(MainActivity.this,CouponActivity.class);
-                //startActivity(l);
             }
         });
+
+
 
         }
 
