@@ -11,7 +11,7 @@
         android:layout_height="64dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="172dp"
+        android:layout_marginBottom="223dp"
         android:background="#70b53f"
         android:text="@string/SPENDING_GRAPH" />
 
@@ -26,19 +26,10 @@
         android:layout_height="74dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="160dp"
         android:background="?attr/colorPrimary"
         android:text="@string/BUDGET" />
 
-    <Button
-        android:id="@+id/CategoryButton"
-        android:layout_width="298dp"
-        android:layout_height="72dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="219dp"
-        android:background="#b5433f"
-        android:text="@string/CATEGORIES" />
 
     <Button
         android:id="@+id/CouponButton"
@@ -46,7 +37,7 @@
         android:layout_height="63dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="68dp"
+        android:layout_marginBottom="106dp"
         android:background="#ee8200"
         android:text="COUPONS" />
 
@@ -57,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="72dp"
         android:text="SETTINGS" />
 
 </RelativeLayout>

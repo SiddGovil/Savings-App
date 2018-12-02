@@ -6,9 +6,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.net.Uri;
+import android.widget.Toast;
+
+import java.io.FileOutputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+
 public class MainActivity extends AppCompatActivity {
     private Button budgetpage;
-    private Button categorypage;
     private Button graphpage;
     private Button couponpage;
     private Button settingspage;
@@ -23,14 +29,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this,BudgetActivity.class);
                 startActivity(i);
-            }
-        });
-        categorypage = findViewById(R.id.CategoryButton);
-        categorypage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent j = new Intent(MainActivity.this,CategoryActivity.class);
-                startActivity(j);
             }
         });
 
@@ -68,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         }
+
+
 
 
 

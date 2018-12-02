@@ -27,6 +27,7 @@ android {
 dependencies {
     implementation project(':main')
     implementation project(':base')
+    compile 'com.jjoe64:graphview:4.2.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     testCompile 'junit:junit:4.12'
 

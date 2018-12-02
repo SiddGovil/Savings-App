@@ -1,5 +1,6 @@
 package universityatbuffalo.cse442groupproject.main;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,10 +8,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Vector;
+
 public class BudgetActivity extends AppCompatActivity {
     float inputbugdet;
+    float amountspent;
+    int rating;
+    String inputlocation;
     Button submitButton;
+    Button spendingHistory;
+    Button saveButton;
     EditText budgetinput;
+    EditText locationinput;
+    EditText amountinput;
+    EditText ratinginput;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,10 +42,19 @@ public class BudgetActivity extends AppCompatActivity {
             }
         });
 
+        spendingHistory = findViewById(R.id.spendinghistory);
+        spendingHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent k = new Intent(BudgetActivity.this,HistoryActivity.class);
+                startActivity(k);
+            }
+        });
+
     }
 
-        private void showToast(String text){
-            Toast.makeText(BudgetActivity.this, text, Toast.LENGTH_SHORT).show();
-            //return text;
-        }
+    private void showToast(String text){
+        Toast.makeText(BudgetActivity.this, text, Toast.LENGTH_SHORT).show();
+        //return text;
+    }
 }
