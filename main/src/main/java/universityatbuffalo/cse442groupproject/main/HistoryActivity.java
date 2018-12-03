@@ -47,7 +47,7 @@ public class HistoryActivity  extends AppCompatActivity {
         amountET = findViewById(R.id.amountText);
         bt =  findViewById(R.id.testButton);
         lv =  findViewById(R.id.listViewTest);
-        tryB = findViewById(R.id.tryButton);
+        //tryB = findViewById(R.id.tryButton);
 
         final Button pickDate = (Button) findViewById(R.id.pick_date);
         tv = (TextView) findViewById(R.id.date1);
@@ -127,7 +127,7 @@ public class HistoryActivity  extends AppCompatActivity {
 
 
     public void onButtonClick() {
-        tryB.setOnClickListener(new OnClickListener() {
+        bt.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -146,7 +146,7 @@ public class HistoryActivity  extends AppCompatActivity {
 
                     if (rating1 >= 1 && rating1 <= 5 && amount1 > 0 ) {
 
-                        String result = "Date: " + tv.getText() + "Location: " + location1 + "Amount: " + amount1 + "Rating: " + rating1;
+                        String result = "Date: " + tv.getText() + "  Location: " + location1 + "  Amount: " + amount1 + "  Rating: " + rating1;
 
                         String str = tv.getText() + " " + amount1;
 
@@ -202,9 +202,8 @@ public class HistoryActivity  extends AppCompatActivity {
         }
 
 
-
-
-
+    public void showDatePickerDialog(View view) {
+    }
 }
 
 

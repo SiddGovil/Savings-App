@@ -9,9 +9,8 @@
         android:id="@+id/testEdit"
         android:layout_width="96dp"
         android:layout_height="51dp"
-        android:layout_alignBottom="@+id/date"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="110dp"
+        android:layout_alignBottom="@+id/date1"
+        android:layout_toEndOf="@+id/pick_date"
         android:hint="Location"
         tools:layout_editor_absoluteX="96dp"
         tools:layout_editor_absoluteY="48dp" />
@@ -20,8 +19,9 @@
         android:id="@+id/testButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/pick_date"
-        android:layout_toStartOf="@+id/amountText"
+        android:layout_marginEnd="128dp"
         android:background="@android:color/holo_red_light"
         android:text="Submit"
         tools:layout_editor_absoluteX="148dp"
@@ -34,6 +34,7 @@
         android:layout_height="356dp"
         android:layout_alignParentBottom="true"
         tools:layout_editor_absoluteX="8dp"
+        android:isScrollContainer= "false"
         tools:layout_editor_absoluteY="204dp" />
 
     <EditText
@@ -62,10 +63,11 @@
 
     <TextView
         android:id="@+id/date1"
-        android:layout_width="91dp"
-        android:layout_height="30dp"
-        android:layout_alignBottom="@+id/testEdit"
-        android:layout_alignParentStart="true" />
+        android:layout_width="94dp"
+        android:layout_height="39dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="62dp" />
 
     <Button
         android:id="@+id/pick_date"
@@ -73,16 +75,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="115dp"
         android:onClick="showDatePickerDialog"
-        android:text="Pick date" />
+        android:text="Select date" />
 
-    <Button
-        android:id="@+id/tryButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/testButton"
-        android:layout_toStartOf="@+id/ratingText"
-        android:text="Button" />
+
+
+
 
 </RelativeLayout>
