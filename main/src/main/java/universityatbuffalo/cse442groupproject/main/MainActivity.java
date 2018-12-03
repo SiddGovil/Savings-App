@@ -53,17 +53,20 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
 
-                settingspage = findViewById(R.id.settings);
-                settingspage.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent l = new Intent(MainActivity.this,SettingsActivity.class);
-                        startActivity(l);
-                    }
-                });
+
 
                // Intent l = new Intent(MainActivity.this,CouponActivity.class);
                 //startActivity(l);
+            }
+        });
+
+
+        settingspage = findViewById(R.id.settings);
+        settingspage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent l = new Intent(MainActivity.this,SettingsActivity.class);
+                startActivity(l);
             }
         });
 
