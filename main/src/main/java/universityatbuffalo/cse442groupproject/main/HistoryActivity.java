@@ -188,8 +188,8 @@ public class HistoryActivity  extends AppCompatActivity {
                 writer.write(s + ls);
                 //showToast("Written");
 
-            } catch (Exception e) {
-                e.printStackTrace();
+            } catch (Exception exe) {
+                exe.printStackTrace();
             } finally {
                 if (writer != null) {
                     try {
