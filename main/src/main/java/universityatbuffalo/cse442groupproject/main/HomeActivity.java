@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.Image;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,30 +18,39 @@ public class HomeActivity extends AppCompatActivity {
     Button update;
     EditText pinText;
     ImageView logo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 //        logo = findViewById(R.id.imageView2);
         pinText = findViewById(R.id.pin);
+        final String tyler = "tyler";
         mainpage = findViewById(R.id.loginbutton);
         update = findViewById(R.id.updatepin);
+        final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         mainpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                String value = preferences.getString("PIN", "");
+                showToast(value);
                 String pinTemp = pinText.getText().toString();
-                if(pinTemp.isEmpty()) {
-                    showToast("Must Create PIN first");
+                if(pinTemp.equals(value)) {
+                    Intent q = new Intent(HomeActivity.this, MainActivity.class);
+                    startActivity(q);
+
                 }else {
-                    SharedPreferences sharedPreferences = getSharedPreferences("Login", MODE_PRIVATE);
-                    String password = sharedPreferences.getString("password", "");
-                    if(password == pinTemp) {
-                        Intent q = new Intent(HomeActivity.this, MainActivity.class);
-                        startActivity(q);
-                    }
-                    else{
-                        showToast("Incorrect Password");
-                    }
+                    showToast("Must Create PIN first or Incorrect PIN");
+//                    SharedPreferences sharedPreferences = getSharedPreferences("Login", MODE_PRIVATE);
+//                    String password = sharedPreferences.getString("password", "");
+//                    if(password.equals(pinTemp)) {
+//                        Intent q = new Intent(HomeActivity.this, MainActivity.class);
+//                        startActivity(q);
+//                    }
+//                    else{
+//                        showToast("Incorrect Password");
+//                    }
                 }
             }
         });
