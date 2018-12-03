@@ -37,6 +37,7 @@ public class HomeActivity extends AppCompatActivity {
                 showToast(value);
                 String pinTemp = pinText.getText().toString();
                 if(pinTemp.equals(value)) {
+
                     Intent q = new Intent(HomeActivity.this, MainActivity.class);
                     startActivity(q);
 

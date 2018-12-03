@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     private Button graphpage;
     private Button couponpage;
     private Button settingspage;
+    Button signout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +65,14 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
+        signout = findViewById(R.id.logout);
+        signout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent m = new Intent(MainActivity.this,HomeActivity.class);
+                startActivity(m);
+            }
+        });
 
 
         }
