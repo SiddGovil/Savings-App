@@ -10,11 +10,6 @@ import android.widget.Switch;
 import android.widget.ToggleButton;
 
 public class SettingsActivity extends AppCompatActivity {
-    private Button switch1;
-    private Button switch2;
-    private Button switch3;
-    private Button switch4;
-    private Button switch5;
 
     @Override
     public <T extends View> T findViewById(int id) {
